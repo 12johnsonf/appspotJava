@@ -1,4 +1,4 @@
-package clientHack;
+
 
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
@@ -18,7 +18,7 @@ import javax.swing.border.EmptyBorder;
 public class answerFrame extends JFrame implements ActionListener{
 
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = -996436564331235943L;
 	Map<String, String> cookies;
@@ -30,10 +30,10 @@ public class answerFrame extends JFrame implements ActionListener{
     JButton cancel;
     JButton next;
     String number;
-	
+
 	public answerFrame(Map<String, String> cookies2) throws IOException, URISyntaxException {
 		cookies = cookies2;
-		
+
 		JPanel gui = new JPanel(new BorderLayout(3,2));
 
         gui.setBorder(new EmptyBorder(5,5,5,5));
@@ -50,28 +50,28 @@ public class answerFrame extends JFrame implements ActionListener{
 		menu = new JButton("<html>Submit and back to main menu</html>");
 		next = new JButton("<html>Submit and next</html>");
 		cancel = new JButton("<html>Discard and cancel</html>");
-		
-		
+
+
 		JPanel marking = new JPanel(new BorderLayout(2,3));
 		JPanel nav = new JPanel(new BorderLayout(3,2));
-        
+
         marking.add(answerLabel, BorderLayout.WEST);
         marking.add(answer, BorderLayout.CENTER);
-        
+
         nav.add(cancel, BorderLayout.WEST);
         nav.add(menu, BorderLayout.CENTER);
         nav.add(next, BorderLayout.EAST);
         nav.add(remaining, BorderLayout.NORTH);
-        
-       
+
+
         gui.add(markscheme, BorderLayout.NORTH);
         gui.add(marking,BorderLayout.CENTER);
         gui.add(nav, BorderLayout.SOUTH);
-        
+
         menu.addActionListener(this);
         next.addActionListener(this);
         cancel.addActionListener(this);
-        
+
         setTitle("Question marking");
         setVisible(true);
         pack();
@@ -81,7 +81,7 @@ public class answerFrame extends JFrame implements ActionListener{
 
 	public void actionPerformed(ActionEvent e) {
 		Object src = e.getSource();
-		
+
 		if (src==menu||src==next){
 			try {
 				methods.submitAnswer(answer.getText(), cookies);

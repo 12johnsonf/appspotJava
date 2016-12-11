@@ -1,4 +1,4 @@
-package clientHack;
+
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
@@ -17,14 +17,14 @@ import org.jsoup.nodes.Document;
 
 public class loginFrame extends JFrame implements ActionListener{
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 5992354732592148195L;
 	JTextField name;
     JPasswordField pass;
     JButton submit;
     JFrame main;
-	
+
 	public loginFrame() {
 		main = new JFrame("Login Form ");
         main.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -44,7 +44,7 @@ public class loginFrame extends JFrame implements ActionListener{
         labels.add(new JLabel("Password: "));
         controls.add(pass);
         submit = new JButton("Submit");
-        
+
         submit.addActionListener(this);
 
         gui.add(submit, BorderLayout.SOUTH);
@@ -90,7 +90,6 @@ public class loginFrame extends JFrame implements ActionListener{
 		} else{
 			new msgFrame("Login failed. Please try again.");
 		}
-		
+
     }
 }
-

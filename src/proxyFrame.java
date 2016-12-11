@@ -1,4 +1,4 @@
-package clientHack;
+
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
@@ -12,14 +12,14 @@ import org.jsoup.Jsoup;
 
 public class proxyFrame extends JFrame implements ActionListener{
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 6768220396298070999L;
 	JTextField host;
 	JTextField port;
     JButton submit;
     JFrame main;
-	
+
 	public proxyFrame() {
 		main = new JFrame("Proxy Settings");
         main.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -42,7 +42,7 @@ public class proxyFrame extends JFrame implements ActionListener{
         labels.add(new JLabel("Proxy Port: "));
         controls.add(port);
         submit = new JButton("Submit");
-        
+
         submit.addActionListener(this);
 
         gui.add(submit, BorderLayout.SOUTH);
@@ -54,7 +54,7 @@ public class proxyFrame extends JFrame implements ActionListener{
     public void actionPerformed(ActionEvent e) {
     	System.setProperty("http.proxyHost", host.getText());
 		System.setProperty("http.proxyPort", port.getText());
-		
+
 		main.dispose();
 		try {
 			Jsoup.connect(
@@ -66,4 +66,3 @@ public class proxyFrame extends JFrame implements ActionListener{
 		}
     }
 }
-

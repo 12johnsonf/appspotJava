@@ -1,4 +1,4 @@
-package clientHack;
+
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
@@ -19,7 +19,7 @@ import org.jsoup.nodes.Document;
 
 public class menuFrame extends JFrame implements ActionListener {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 2792520817263434748L;
 	JButton mark = new JButton("Mark questions");
@@ -41,7 +41,7 @@ public class menuFrame extends JFrame implements ActionListener {
 				.cookies(cookies).get();
 		boolean needAnswer = qCheck.getElementsByTag("h1").first() == null;
 		boolean moderator = (mCheck.getElementsByTag("h1").first().text().equals("Only moderators can mark questions, at the moment  you have not be designated a moderator!"));
-		
+
 		main = new JFrame("Main menu");
 		main.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

@@ -1,4 +1,4 @@
-package clientHack;
+
 
 import java.awt.FlowLayout;
 import java.util.ArrayList;
@@ -7,10 +7,10 @@ import javax.swing.JComboBox;
 import javax.swing.JFrame;
 
 public class multiFrame extends JFrame {
-	
-	
+
+
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 8367240108880889277L;
 

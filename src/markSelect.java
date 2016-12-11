@@ -1,4 +1,4 @@
-package clientHack;
+
 
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
@@ -17,7 +17,7 @@ import javax.swing.border.EmptyBorder;
 
 public class markSelect extends JFrame implements ActionListener {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 3635981608702144530L;
 	Map<String, String> cookies;
